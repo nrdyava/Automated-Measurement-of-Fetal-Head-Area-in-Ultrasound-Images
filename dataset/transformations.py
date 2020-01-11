@@ -1,10 +1,5 @@
-from __future__ import print_function,division
 import os
 import torch
-import math
-import sys
-import random
-from PIL import Image
 import pandas as pd
 from skimage import io,transform
 import numpy as np
@@ -12,6 +7,8 @@ from torch.utils.data import Dataset,DataLoader
 from torchvision import transforms,utils
 import matplotlib.pyplot as plt
 from torchvision.transforms import functional as G
+import random
+from PIL import Image
 
 
 
