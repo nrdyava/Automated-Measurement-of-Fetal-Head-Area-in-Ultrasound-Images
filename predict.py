@@ -79,11 +79,10 @@ if __name__=='__main__':
     output=output.view(388,388)
     output=output*255
     output=output.numpy()
-
+    
     if args.pixel_size!=None:
         fetus_area=area_calculator(output)*(args.pixel_size**2)*(height/388)*(width/388)
-        print('fetus area:',round(fetus_area/100,4),'cm^2')
-
+    
     output=transform.resize(output,(height,width))
     
 
@@ -93,6 +92,9 @@ if __name__=='__main__':
 
     if args.visualize:
         fig=plt.figure()
+        if args.pixel_size!=None:
+            text_output='fetus area: %f cm^2'%(round(fetus_area/100,4))
+            fig.suptitle(text_output,fontsize=16,fontweight='bold')
         segmented=fig.add_subplot(1,2,1)
         segmented.set_title('segmented fetus')
         plot=plt.imshow(output,'gray')
@@ -101,6 +103,7 @@ if __name__=='__main__':
         original.set_title('original ultrasound image')
         plot=plt.imshow(img_orig,'gray')
         plt.axis('off')
+        plt.show()
         
 
 
