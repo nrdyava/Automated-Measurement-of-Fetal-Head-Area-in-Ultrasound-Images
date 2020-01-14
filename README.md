@@ -8,9 +8,9 @@ The network was trained for 100 epochs using batch size=1 and obtained pixel acc
 
 The data is used from the [Grand Challenge](https://hc18.grand-challenge.org/).
 
-##Usage
-**Programming Language used: Python3**
-###Training
+## Usage
+**Programming Language : Python3**
+### Training
 
 ```shell script
 >python3 trainer.py -h
