@@ -1,4 +1,3 @@
-## Welcome to GitHub Pages
+# Automated measurement of fetal head area using Deep Learning
 
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Semantic segmentation of Fetal head followed by calculation of its area using [U-Net]([https://arxiv.org/abs/1505.04597](https://arxiv.org/abs/1505.04597)).
