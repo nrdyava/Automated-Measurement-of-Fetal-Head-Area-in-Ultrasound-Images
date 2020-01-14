@@ -16,10 +16,16 @@ The code for training is constructed in such a way that a particular structure o
 
 The above code will automotically download, unzip, creates test, training & validation directories, then splits the annotations from the images(Images and targets are together in the source of the data).
 
-The original annotations in the source of the data are elliptical closed figure because the task in the Grand challenge was estimating the fetus head perimeter. In this task we need to segment the fetus head and calculate the area. So an appropriate function is built in the data downloader to fill the annotations automatically without any manual processing.
+The original annotations in the source of the data are elliptical closed figure because the task in the Grand challenge was estimating the fetus head perimeter. In this task we need to segment the fetus head and calculate the area. So an appropriate function is built in the data downloader to fill the annotations automatically without any manual processing. 
+The process of downloading data and filling annotations will take some time. This is only one time thing.
+
 
 The annotations before and after filing are shown below:
 ![filling images](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/filled%20images.png)
+
+After running the file data_downloader.py you will see a folder called data in the working directory. Please explore the data folder to get an idea about the data.
+
+After this step the data can be used to train the model & predict the outcomes of the model.
 
 ### Training:
 
