@@ -12,7 +12,7 @@ The data is used from the [Grand Challenge](https://hc18.grand-challenge.org/).
 **Programming Language used: Python3**
 ###Training
 
-'''shell script
+```shell script
 >python3 trainer.py -h
 usage: trainer.py [-h] [--lr LR] --n_epochs N_EPOCHS [--device {cpu,gpu}]
                   [--load LOAD] [--bs BS] --save SAVE
@@ -33,7 +33,7 @@ optional arguments:
                               (default= 1)
   --save SAVE          path to save trained weights
                               (required: True)
-'''
+```
 One can specify which model to use with '--load WEIGHTS.pth'
 
 
