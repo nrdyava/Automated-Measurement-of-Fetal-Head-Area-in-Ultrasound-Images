@@ -1,5 +1,5 @@
 # Automated measurement of fetal head area using Deep Learning
-![segmented image](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/segmented_image.JPG)
+![segmented image](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/segmented_image.JPG)
 
 Semantic segmentation of Fetal head & Area determination using the [U-Net](https://arxiv.org/abs/1505.04597).
 This model was trained from scratch using 800 training images. Random crop & random vertical flip methods are used for data augmentation.
@@ -19,9 +19,7 @@ The above code will automotically download, unzip, creates test, training & vali
 The original annotations in the source of the data are elliptical closed figure because the task in the Grand challenge was estimating the fetus head perimeter. In this task we need to segment the fetus head and calculate the area. So an appropriate function is built in the data downloader to fill the annotations automatically without any manual processing.
 
 The annotations before and after filing are shown below:
-
-
-
+![filling images](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/filled%20images.png)
 
 ### Training:
 
