@@ -86,3 +86,7 @@ Note: If you want to save the output you can specify the output path.However the
 
 The complete code for prediction looks like this:
 `python3 predict.py --device=gpu --load=trained_weights/unet_100_epochs.pth --path=data/test_set/152_HC.png --pixel_size=0.25199 --visualize=True`
+
+
+### About training:
+The model was trained on Google Colaboratory. It took approximately 7hrs to train the model for 100 epochs.
