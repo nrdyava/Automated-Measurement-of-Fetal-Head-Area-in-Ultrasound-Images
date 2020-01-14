@@ -13,10 +13,13 @@ The data is used from the [Grand Challenge](https://hc18.grand-challenge.org/).
 ### Downloading data & making data directories
 The code for training is constructed in such a way that a particular structure of the directory is necessary within the data folder. So, instead of manually downloading data from the link mentioned above run the following command in the terminal:
 `python3 data_downloader.py`
+
 The above code will automotically download, unzip, creates test, training & validation directories, then splits the annotations from the images(Images and targets are together in the source of the data).
+
 The original annotations in the source of the data are elliptical closed figure because the task in the Grand challenge was estimating the fetus head perimeter. In this task we need to segment the fetus head and calculate the area. So an appropriate function is built in the data downloader to fill the annotations automatically without any manual processing.
 
 The annotations before and after filing are shown below:
+
 
 
 
