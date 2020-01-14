@@ -10,7 +10,7 @@ The data is used from the [Grand Challenge](https://hc18.grand-challenge.org/).
 
 ## Usage
 **Programming Language : Python3**
-### Training
+### Training:
 
 ```shell script
 >python3 trainer.py -h
@@ -26,7 +26,7 @@ optional arguments:
   --n_epochs N_EPOCHS  number of epochs
                               (required: True)
   --device {cpu,gpu}   device to train the model
-                              (default device:'cpu')
+                              (default='cpu')
   --load LOAD          path of pre-trained weights
                               (default= None,it will start from scratch)
   --bs BS              batch size of dataloader
@@ -34,6 +34,38 @@ optional arguments:
   --save SAVE          path to save trained weights
                               (required: True)
 ```
-One can specify which model to use with '--load WEIGHTS.pth'
+You can specify which model to use with `--load WEIGHTS.pth`
 
+The complete structure of code looks like:
+`python3 trainer.py --n_epochs=1 --device=gpu --save=trained_weights/unet_10_epochs.pth --lr=0.001 --bs=1`
 
+### Prediction:
+
+```shell script
+>python3 predict.py -h
+usage: predict.py [-h] [--visualize VISUALIZE] [--device {cpu,gpu}] --load
+                  LOAD --path PATH [--output_path OUTPUT_PATH]
+                  [--pixel_size PIXEL_SIZE]
+
+Command line arguments for predicting Unet model perfomance
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --visualize VISUALIZE
+                        visualize predictions of the network ?
+                            (deault= True)
+  --device {cpu,gpu}    device to run the model.
+                            (default='cpu')
+  --load LOAD           path of trained weights.
+                            (required= True)
+  --path PATH           path of image to predict.
+                            (required= True)
+  --output_path OUTPUT_PATH
+                        path to save the predicted image
+  --pixel_size PIXEL_SIZE
+                        pixel size of input image
+```
+Note: If you want to save the output you can specify the output path.However there is a easier way of saving it. By enabling `--visualize=True` a matplotlib window pops up. You can save by clicking the save button on the window.
+
+The complete code for prediction looks like this:
+`python3 predict.py --device=gpu --load=trained_weights/unet_100_epochs.pth --path=data/test_set/152_HC.png --pixel_size=0.25199 --visualize=True`
