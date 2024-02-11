@@ -1,4 +1,4 @@
-# Automated measurement of fetal head area using Deep Learning
+# Automated Measurement of Fetal Head Area in 2D Ultrasound Images
 ![segmented image](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/segmented_image.jpg)
 
 Semantic segmentation of Fetus head & Area determination using a modified [U-Net](https://arxiv.org/abs/1505.04597) architecture.

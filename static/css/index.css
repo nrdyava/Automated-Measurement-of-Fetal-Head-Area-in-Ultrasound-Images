@@ -115,14 +115,14 @@ body {
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: auto;
   overflow: hidden;
   padding: 20px;
   font-size: 0;
 }
 
 .results-carousel video {
-  margin: 0;
+  margin: auto;
 }
 
 .slider-pagination .slider-page {
