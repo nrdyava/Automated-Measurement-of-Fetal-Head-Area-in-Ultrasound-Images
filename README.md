@@ -1,5 +1,5 @@
 # Automated Measurement of Fetal Head Area in 2D Ultrasound Images
-![segmented image](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/segmented_image.jpg)
+![segmented image](https://raw.githubusercontent.com/nrdyava/ultrasound-fetus-segmentation/master/other/segmented_image.jpg)
 
 Semantic segmentation of Fetus head & Area determination using a modified [U-Net](https://arxiv.org/abs/1505.04597) architecture.
 This model was trained from scratch using 800 training images. Random crop & random vertical flip methods are used for data augmentation.
@@ -21,7 +21,7 @@ The process of downloading data and filling annotations will take some time. Thi
 
 
 The annotations before and after filing are shown below:
-![filling images](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/filled%20images.png)
+![filling images](https://raw.githubusercontent.com/nrdyava/ultrasound-fetus-segmentation/master/other/filled%20images.png)
 
 After running the file data_downloader.py you will see a folder called data in the working directory. Please explore the data folder to get an idea about the data.
 
