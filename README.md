@@ -1,7 +1,7 @@
 # Automated measurement of fetal head area using Deep Learning
 ![segmented image](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/segmented_image.jpg)
 
-Semantic segmentation of Fetus head & Area determination using [U-Net](https://arxiv.org/abs/1505.04597) architecture.
+Semantic segmentation of Fetus head & Area determination using a modified [U-Net](https://arxiv.org/abs/1505.04597) architecture.
 This model was trained from scratch using 800 training images. Random crop & random vertical flip methods are used for data augmentation.
 
 The Network was trained for 100 epochs using batch size=1 and obtained pixel accuracy of 96.95 % on the validation dataset which contains 200 images. The link to the trained weights is [here](https://drive.google.com/file/d/1-1EyBEFwcYASzuWcrETOv449BTrt0RaQ/view?usp=sharing).
