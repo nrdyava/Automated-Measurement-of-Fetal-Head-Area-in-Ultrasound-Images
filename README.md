@@ -21,7 +21,7 @@ The process of downloading data and filling annotations will take some time. Thi
 
 
 The annotations before and after filing are shown below:
-![filling images](https://raw.githubusercontent.com/naveenrd/ultrasound-fetus-segmentation/master/other/filled%20images.png)
+![filling images](https://raw.githubusercontent.com/nrdyava/ultrasound-fetus-segmentation/master/other/filled%20images.png)
 
 After running the file data_downloader.py you will see a folder called data in the working directory. Please explore the data folder to get an idea about the data.
 
