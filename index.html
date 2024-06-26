@@ -1,155 +1,92 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Automated Measurement of Fetal Head Area in Ultrasound Images</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-  <title>Automated Measurement of Fetal Head Area in 2D Ultrasound Images</title>
-  <link rel="icon" type="image/x-icon" href="static/images/ultrasound.svg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
 </head>
+
 <body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Automated Measurement of Fetal Head Area in 2D Ultrasound Images</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://nrdyava.com/" target="_blank">Naveen Reddy Dyava</a></span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Indian Institute of Technology Madras (IIT Madras)</span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/nrdyava/Semantic-Segmentation-of-Fetuses-from-Ultrasound-Scans" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>Automated Measurement of Fetal Head Area in Ultrasound Images</br> 
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://nrdyava.com/" target="_blank">
+                          Naveen Reddy Dyava
+                        </a>
+                        </br>Indian Institute of Technology Madras
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
-<!-- Image Block -->
-<div>
-<img src="https://raw.githubusercontent.com/nrdyava/ultrasound-fetus-segmentation/master/other/segmented_image.jpg" class="center" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 20px;">
-<h2 class="subtitle has-text-centered" style="padding: 10px;">
-  Results of segmentation and area estimation on a sample image
-</h2>
-</div>
-<!-- Image Block Ends -->
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Semantic segmentation of Fetus head & Area determination using a modified <a href="https://arxiv.org/abs/1505.04597" target="_blank">U-Net</a> architecture. This model was trained from scratch using 800 training images. Random crop & random vertical flip methods are used for data augmentation.<br>
-            <br>
-            The Network was trained for 100 epochs using batch size = 1 and obtained pixel accuracy of 92.95 % on the validation dataset which contains 200 images. The link to the trained weights is <a href="https://drive.google.com/file/d/1-1EyBEFwcYASzuWcrETOv449BTrt0RaQ/view?usp=sharing" target="_blank">here</a>. The data is used from the <a href="https://hc18.grand-challenge.org/" target="_blank">Grand Challenge</a>.
-          </p>
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://github.com/nrdyava/Automated-Measurement-of-Fetal-Head-Area-in-Ultrasound-Images" target="_blank">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
 
 
 
-<!-- Image Block -->
-<div>
-  <img src="https://raw.githubusercontent.com/nrdyava/ultrasound-fetus-segmentation/master/other/filled%20images.png" class="center" style="display: block;margin-left: auto;margin-right: auto;width: 50%; padding: 20px;">
-  <h2 class="subtitle has-text-centered" style="padding: 10px;">
-    Data preprocessing: Automatic Image Annotation
-  </h2>
-  </div>
-  <!-- Image Block Ends -->
-
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Abstract</b>
+                </h3>
+                <p class="text-justify">
+                    Abstract will be updated soon
+                </p>
+                <image src="img/ufs_project_img.jpg" class="img-responsive" alt="overview"><br>
+            </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b>Related links</b>
+                </h3>
+                <p class="text-justify">
+                    U-Net Official Page - <a href="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/" target = "_blank">https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/</a><br>
+                    U-Net Paper - <a href="https://arxiv.org/abs/1505.04597" target = "_blank">https://arxiv.org/abs/1505.04597</a><br>
+                    Source Dataset from the HC18 Challenge - <a href="https://hc18.grand-challenge.org/" target = "_blank">https://hc18.grand-challenge.org/</a>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
